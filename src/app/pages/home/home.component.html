@@ -1,0 +1,28 @@
+<div class="grid mt-3" [style]="{'height':'82vh'}">
+    
+    <!-- IZQUIERDA -->
+    <div class="col-12 sm:col-6 md:col-6 lg:col-6 flex align-items-center justify-content-center">
+        <!-- <p-dock [model]="dockItems" position="left" (click)="showDialog()" styleClass="dock">
+            <ng-template pTemplate="item" let-item>
+                <img src="../../../assets/Edison lópez.svg" [alt]="item.label" width="100%">
+            </ng-template>
+        </p-dock>
+
+        <p-dialog header="Title" [(visible)]="display" position="left">
+            Content
+        </p-dialog> -->
+        <div class="card" style="width: '80%'">
+            <h1>Who am I?</h1>
+            <h2>I'm <span [style]="{'color':'#3100BE'}">Edison Lopez</span>, Web Developer / Software Engineering Student</h2>
+            <p class="mb-3" [style]="{'text-align':'justify'}">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, enim cumque hic aliquam eligendi, eaque perspiciatis dignissimos obcaecati nam tempora assumenda, sint voluptates et soluta dolorum distinctio provident quod temporibus!</p>
+            <button pButton type="button" label="Donwload CV" class="p-button-info" icon="pi pi-download"></button>
+        </div>
+    </div>
+    <!-- FIN IZQUIEDA -->
+
+    <!-- LOGO -->
+    <div class="col-12 sm:col-6 md:col-6 lg:col-6 flex align-items-center justify-content-center">
+        <img src="../../../assets/ofi.svg" alt="" width="60%" class="animate__animated animate__bounceIn ">
+    </div>
+    <!-- FIN LOGO -->
+</div>

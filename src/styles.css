@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+html, body{
+    /* background-color: ; */
+    font-family: var( --font-family );
+}
+p{
+    margin: var(--spacing-m) 0;
+}
+.animate__animated.animate__bounceIn {
+    --animate-duration: 1.3s;
+  }
