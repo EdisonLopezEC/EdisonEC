@@ -8,15 +8,18 @@ import { MenuItem } from 'primeng/api';
 })
 export class HomeComponent implements OnInit {
 
+    isMobile() {
+        return window.innerWidth < 750;
+    }
   constructor() { }
-
+    
   display: boolean = false;
   dockItems: MenuItem[] = [];
 
     showDialog(){
         this.display = true;
     }
-    
+        
     ngOnInit() {
         this.dockItems = [
             {

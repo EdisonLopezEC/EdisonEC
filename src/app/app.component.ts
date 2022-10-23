@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MoveDirection, ClickMode, HoverMode, OutMode } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import { PrimeNGConfig } from 'primeng/api';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'portafolio';
+
+  ngOnInit(): void {
+    this.primengconfig.ripple = true;
+  }
+
+  constructor(private primengconfig: PrimeNGConfig){}
 
   id = "tsparticles";
 
@@ -17,6 +25,7 @@ export class AppComponent {
 
   /* or the classic JavaScript object */
   particlesOptions = {
+    "fpsLimit": 15,
     "fullScreen": {
         "enable": true,
         "zIndex": -1
@@ -24,7 +33,7 @@ export class AppComponent {
     "particles": {
         "number": {
             // "value": 180,
-            "value": 150,
+            "value": 180,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -87,7 +96,7 @@ export class AppComponent {
                 "mode": "bubble"
             },
             "onclick": {
-                "enable": true,
+                "enable": false,
                 "mode": "repulse"
             },
             "resize": true
@@ -118,7 +127,7 @@ export class AppComponent {
             }
         }
     },
-    "retina_detect": true,
+    "retina_detect": false,
     "background": {
         "color": "#040d19",
         "repeat": "no-repeat",
@@ -133,7 +142,6 @@ export class AppComponent {
   }
 
   async particlesInit(engine: any): Promise<void> {
-    console.log(engine);
 
     // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready

@@ -1,28 +1,69 @@
-<div class="grid mt-3" [style]="{'height':'82vh'}">
-    
-    <!-- IZQUIERDA -->
-    <div class="col-12 sm:col-6 md:col-6 lg:col-6 flex align-items-center justify-content-center">
-        <!-- <p-dock [model]="dockItems" position="left" (click)="showDialog()" styleClass="dock">
-            <ng-template pTemplate="item" let-item>
-                <img src="../../../assets/Edison lópez.svg" [alt]="item.label" width="100%">
-            </ng-template>
-        </p-dock>
+<div class="grid mt-3 pl-4 pr-4" [style]="{ height: '82vh' }">
+  <!-- IZQUIERDA -->
+  <div
+    class="col-12 sm:col-6 md:col-6 lg:col-6 flex align-items-center justify-content-center"
+  >
 
-        <p-dialog header="Title" [(visible)]="display" position="left">
-            Content
-        </p-dialog> -->
-        <div class="card" style="width: '80%'">
-            <h1>Who am I?</h1>
-            <h2>I'm <span [style]="{'color':'#3100BE'}">Edison Lopez</span>, Web Developer / Software Engineering Student</h2>
-            <p class="mb-3" [style]="{'text-align':'justify'}">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, enim cumque hic aliquam eligendi, eaque perspiciatis dignissimos obcaecati nam tempora assumenda, sint voluptates et soluta dolorum distinctio provident quod temporibus!</p>
-            <button pButton type="button" label="Donwload CV" class="p-button-info" icon="pi pi-download"></button>
-        </div>
-    </div>
-    <!-- FIN IZQUIEDA -->
+    <div
+      class="card flex flex-column justify-content-evenly align-items-center"
+      style="width: '90%'"
+      [style]="{ 'text-align': 'center' }"
+    >
+      <h2 class="m-0">Hola, soy Edison López</h2>
+      <h1 class="m-0" [style]="{ 'font-size': '3.5rem' }">
+        Software Developer
+      </h1>
+      <p class="mb-3">apasionado por el desarrollo.</p>
 
-    <!-- LOGO -->
-    <div class="col-12 sm:col-6 md:col-6 lg:col-6 flex align-items-center justify-content-center">
-        <img src="../../../assets/ofi.svg" alt="" width="60%" class="animate__animated animate__bounceIn ">
+      <div class="flex justify-content-evenly" style="width: 100%">
+        <button
+        *ngIf="!isMobile()"
+          pButton
+          pRipple
+          label="Download CV"
+          class="p-button-info p-button-sm"
+          icon="pi pi-download"
+        ></button>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-github"
+          class="p-button-secondary p-button-rounded p-button-outlined p-button-sm"
+        ></button>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-linkedin"
+          class="p-button-info p-button-rounded p-button-outlined p-button-sm"
+        ></button>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-whatsapp"
+          class="p-button-success p-button-rounded p-button-outlined p-button-sm"
+        ></button>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-telegram"
+          class="p-button-rounded p-button-outlined p-button-sm"
+        ></button>
+      </div>
     </div>
-    <!-- FIN LOGO -->
+  </div>
+  <!-- FIN IZQUIEDA -->
+
+  <!-- LOGO -->
+  <div
+    class="col-12 sm:col-6 md:col-6 lg:col-6 flex align-items-center justify-content-center"
+  >
+    <img
+      src="../../../assets/ofi.svg"
+      alt=""
+      width="82%"
+      class="animate__animated animate__zoomIn"
+    />
+  </div>
+  <!-- FIN LOGO -->
 </div>
+

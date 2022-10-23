@@ -8,6 +8,8 @@ import {MenuModule} from 'primeng/menu';
 import {PanelMenuModule} from 'primeng/panelmenu';
 import {DockModule} from 'primeng/dock';
 import {DialogModule} from 'primeng/dialog';
+import {RippleModule} from 'primeng/ripple';
+import {KnobModule} from 'primeng/knob';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import {DialogModule} from 'primeng/dialog';
     MenuModule,
     PanelMenuModule,
     DockModule,
-    DialogModule
+    DialogModule,
+    RippleModule,
+    KnobModule
   ]
 })
 export class PrimengModule { }
