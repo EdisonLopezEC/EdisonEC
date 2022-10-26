@@ -1,0 +1,24 @@
+.marginLogin{
+    margin: -8px;
+}
+.borderRadiusLeft{
+    border-radius: 0px 20px 20px 0px !important;
+}
+
+.borderRadiusRight{
+    border-radius: 20px 0px 0px 20px !important;
+}
+.h-35rem{
+    height: 530px;
+}
+.imagen{
+    background-image: url(../../../../assets/figura.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.boton{
+    width: 100% !important;
+    margin-top: 3px;
+}
+

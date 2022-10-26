@@ -10,7 +10,8 @@ import {DockModule} from 'primeng/dock';
 import {DialogModule} from 'primeng/dialog';
 import {RippleModule} from 'primeng/ripple';
 import {KnobModule} from 'primeng/knob';
-
+import {CheckboxModule} from 'primeng/checkbox';
+import {PasswordModule} from 'primeng/password';
 
 @NgModule({
 
@@ -25,7 +26,9 @@ import {KnobModule} from 'primeng/knob';
     DockModule,
     DialogModule,
     RippleModule,
-    KnobModule
+    KnobModule,
+    CheckboxModule,
+    PasswordModule
   ]
 })
 export class PrimengModule { }

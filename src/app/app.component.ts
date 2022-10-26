@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoveDirection, ClickMode, HoverMode, OutMode } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import { PrimeNGConfig } from 'primeng/api';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class AppComponent implements OnInit{
     this.primengconfig.ripple = true;
   }
 
-  constructor(private primengconfig: PrimeNGConfig){}
+  constructor(private primengconfig: PrimeNGConfig, public route: ActivatedRoute){}
 
   id = "tsparticles";
 
@@ -25,7 +26,7 @@ export class AppComponent implements OnInit{
 
   /* or the classic JavaScript object */
   particlesOptions = {
-    "fpsLimit": 15,
+    "fpsLimit": 40,
     "fullScreen": {
         "enable": true,
         "zIndex": -1

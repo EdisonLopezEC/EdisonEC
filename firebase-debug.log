@@ -1,0 +1,34 @@
+[debug] [2022-10-26T22:14:34.290Z] ----------------------------------------------------------------------
+[debug] [2022-10-26T22:14:34.291Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\904ed\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2022-10-26T22:14:34.292Z] CLI Version:   11.15.0
+[debug] [2022-10-26T22:14:34.292Z] Platform:      win32
+[debug] [2022-10-26T22:14:34.292Z] Node Version:  v16.14.2
+[debug] [2022-10-26T22:14:34.296Z] Time:          Wed Oct 26 2022 17:14:34 GMT-0500 (hora de Ecuador)
+[debug] [2022-10-26T22:14:34.296Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-26T22:14:34.299Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] Already logged in as edisonlopezec@gmail.com
+[debug] [2022-10-26T22:14:46.071Z] ----------------------------------------------------------------------
+[debug] [2022-10-26T22:14:46.073Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\904ed\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-26T22:14:46.073Z] CLI Version:   11.15.0
+[debug] [2022-10-26T22:14:46.073Z] Platform:      win32
+[debug] [2022-10-26T22:14:46.073Z] Node Version:  v16.14.2
+[debug] [2022-10-26T22:14:46.074Z] Time:          Wed Oct 26 2022 17:14:46 GMT-0500 (hora de Ecuador)
+[debug] [2022-10-26T22:14:46.074Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-26T22:14:46.078Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-10-26T22:14:46.107Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-26T22:14:46.107Z] > authorizing via signed-in user (edisonlopezec@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\904ed\OneDrive\Escritorio\Angular\edisonlopez
+
+[warn] !  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2022-10-26T22:14:46.138Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json

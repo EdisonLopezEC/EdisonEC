@@ -6,9 +6,12 @@ import { NgParticlesModule } from "ng-particles";
 import { PrimengModule } from './primeng/primeng.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './pages/home/home.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { SkillsComponent } from './pages/skills/skills.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './admin/pages/projects/projects.component';
+import { LoginComponent } from './auth/pages/login/login.component';
+
 
 
 @NgModule({
@@ -17,6 +20,8 @@ import { SkillsComponent } from './pages/skills/skills.component';
     HomeComponent,
     ContactComponent,
     SkillsComponent,
+    ProjectsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
