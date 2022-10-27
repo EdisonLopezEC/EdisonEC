@@ -11,6 +11,10 @@ import { ContactComponent } from './contact/contact.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './admin/pages/projects/projects.component';
 import { LoginComponent } from './auth/pages/login/login.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 
@@ -29,7 +33,10 @@ import { LoginComponent } from './auth/pages/login/login.component';
     NgParticlesModule,
     SharedModule,
     BrowserAnimationsModule,
-    PrimengModule
+    PrimengModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
