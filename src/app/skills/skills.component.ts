@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SkillsService } from '../services/skills.service';
 
 interface Skill {
   name: string;
@@ -15,9 +16,12 @@ interface Skill {
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private skillService: SkillsService) { }
   skills: Skill[] = [];
     
+  addSkill(){
+    this.skillService.addSkill(this.skills[0]);
+  }
   ngOnInit(): void {
     this.skills = [
       {

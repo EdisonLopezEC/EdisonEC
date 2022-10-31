@@ -1,13 +1,8 @@
-<app-menu *ngIf="!route.children.toString().includes('auth')"></app-menu>
-<ng-particles  [options]="particlesOptions" [particlesInit]="particlesInit">
+<app-menu
+  *ngIf="
+    !route.children.toString().includes('auth') && !route.children.toString().includes('admin')
+  "
+></app-menu>
+<ng-particles [options]="particlesOptions" [particlesInit]="router.url.toString() ==='/admin'?undefined : particlesInit">
 </ng-particles>
 <router-outlet></router-outlet>
-
-
-
- 
-
-
-
-
-        
