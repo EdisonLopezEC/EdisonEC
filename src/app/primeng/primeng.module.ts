@@ -12,10 +12,12 @@ import {RippleModule} from 'primeng/ripple';
 import {KnobModule} from 'primeng/knob';
 import {CheckboxModule} from 'primeng/checkbox';
 import {PasswordModule} from 'primeng/password';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 @NgModule({
 
   exports: [
+    InputSwitchModule,
     ButtonModule,
     CardModule,
     MenubarModule,

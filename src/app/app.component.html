@@ -5,4 +5,6 @@
 ></app-menu>
 <ng-particles [options]="particlesOptions" [particlesInit]="router.url.toString() ==='/admin'?undefined : particlesInit">
 </ng-particles>
+
+<p-inputSwitch [(ngModel)]="themeSelection" (onChange)="changeTheme($event.checked)"></p-inputSwitch>
 <router-outlet></router-outlet>
