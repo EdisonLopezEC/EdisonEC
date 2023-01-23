@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PrimengModule } from '../primeng/primeng.module';
 import { MenuComponent } from './menu/menu.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { MenuAdminComponent } from './menu-admin/menu-admin.component';
   ],
   imports: [
     CommonModule,
-    PrimengModule
+    PrimengModule,
+    FormsModule
   ],
   exports: [
     MenuComponent,

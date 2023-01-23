@@ -3,8 +3,7 @@
     !route.children.toString().includes('auth') && !route.children.toString().includes('admin')
   "
 ></app-menu>
-<ng-particles [options]="particlesOptions" [particlesInit]="router.url.toString() ==='/admin'?undefined : particlesInit">
+<ng-particles *ngIf="!router.url.includes('/admin')"[options]="particlesOptions" [particlesInit]="particlesInit" id="particles">
 </ng-particles>
 
-<p-inputSwitch [(ngModel)]="themeSelection" (onChange)="changeTheme($event.checked)"></p-inputSwitch>
 <router-outlet></router-outlet>

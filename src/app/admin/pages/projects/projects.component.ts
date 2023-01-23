@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProjectsService } from 'src/app/services/projects.service';
 import { UserService } from '../../../services/user.service';
+import { SkillsService } from '../../../services/skills.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,10 +11,20 @@ import { UserService } from '../../../services/user.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router) {  
-  
+
+  skills: any= [];
+  constructor(private userService: UserService, private router: Router, private projectsService: SkillsService) {  
+    this.skills = this.projectsService.getSkills()
+    // console.log(this.skills);
+
+
   }
 
+  display: boolean = false;
+
+  showContent(){
+    this.display = true;
+  }
 
   logout(){
     this.userService.logout().then

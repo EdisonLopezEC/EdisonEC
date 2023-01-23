@@ -17,10 +17,10 @@
 
       <div class="flex justify-content-evenly" style="width: 100%">
         <button
-        *ngIf="!isMobile()"
+          *ngIf="!isMobile()"
           pButton
           pRipple
-          label="Download CV"
+          label="Descagar CV"
           class="p-button-info p-button-sm"
           icon="pi pi-download"
         ></button>
@@ -28,6 +28,7 @@
           pButton
           pRipple
           icon="pi pi-github"
+          (click)="openLink('https://github.com/EdisonLopezEC')"
           class="p-button-secondary p-button-rounded p-button-outlined p-button-sm"
         ></button>
         <button
@@ -35,6 +36,7 @@
           pRipple
           icon="pi pi-linkedin"
           class="p-button-info p-button-rounded p-button-outlined p-button-sm"
+          
         ></button>
         <button
           pButton

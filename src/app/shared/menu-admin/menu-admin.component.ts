@@ -15,10 +15,12 @@ export class MenuAdminComponent implements OnInit {
       {
         label: 'Skills',
         icon: './assets/icons/agencia.svg',
+        routerLink: ['/admin/skills'],
       },
       {
         label: 'Proyectos',
-        icon: './assets/icons/agencia.svg',
+        icon: './assets/proyectos12.png',
+        routerLink: ['/admin/proyectos'],
       }
     ];
   }

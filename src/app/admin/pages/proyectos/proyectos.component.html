@@ -1,0 +1,55 @@
+<div class="contenedor" fxLayout="column" fxLayoutAlign="space-around">
+  <h1 fxLayoutAlign="center" class="mt-5">Administración de proyecto</h1>
+  <p-dialog [(visible)]="display">
+      <p-header>
+          <h1>Crear proyecto</h1>
+      </p-header>
+      <input type="text" pInputText [(ngModel)]="proyecto.nombre" placeholder="Nombre">
+      <input type="text" pInputText [(ngModel)]="proyecto.descripcion" placeholder="Descripcion">
+      <input type="text" pInputText [(ngModel)]="proyecto.url" placeholder="Url">
+      <input type="text" pInputText [(ngModel)]="proyecto.tecnologias" placeholder="Tecnologias">
+      <input type="text" pInputText [(ngModel)]="proyecto.plataformas" placeholder="Plataformas">
+      <p-footer>
+          <p-button label="Guardar" icon="pi pi-check" (click)="saveProyecto()"></p-button>
+          <p-button label="Cancelar" icon="pi pi-times" (click)="hideDialog()"></p-button>
+      </p-footer>
+  </p-dialog>
+  <p-button type="button" (click)="showDialog()" label="Crear"></p-button>
+
+
+  <p-card >
+      <div class="h-28rem" fxLayout="row" fxLayoutAlign="center center">
+          <div class="h-29rem">
+              <div class="card">
+                  <p-table [value]="proyectos" selectionMode="single" dataKey="code" [tableStyle]="{'min-width': '40rem'}" [scrollable]="true" scrollHeight="25rem" [paginator]="true" [rows]="6">
+                      <ng-template pTemplate="header">
+                          <tr>
+                              <th style="max-width:90px">Nombre</th>
+                              <th style="max-width:90px">Descripcion</th>
+                              <th style="max-width:90px">Url</th>
+                              <th style="max-width:90px">Tecnologias</th>
+                              <th style="max-width:90px">Plataformas</th>
+                          </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-proyectos>
+                          <tr [pSelectableRow]="proyectos">
+                              
+                              <td style="max-width:90px">{{proyectos.nombre}}</td>
+                                <td style="max-width:90px">{{proyectos.descripcion}}</td>
+                                <td style="max-width:90px">{{proyectos.url}}</td>
+                                <td style="max-width:90px">{{proyectos.tecnologias}}</td>
+                              <td style="max-width:90px">{{proyectos.plataformas}}</td>
+                              <td>
+                                  <button pButton type="button" class="p-button-rounded p-button-success p-mr-2" label="delete" (click)="deleteProject(proyectos.id)"></button>
+                                  <button pButton type="button" class="p-button-rounded p-button-warning p-mr-2" label="edit" (click)="editProject(proyectos)"></button>
+                              </td>
+                          </tr>
+                      </ng-template>
+                  </p-table>
+              </div>
+          </div>
+      </div>
+  </p-card>
+  
+</div>
+

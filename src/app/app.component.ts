@@ -14,7 +14,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent implements OnInit{
   title = 'portafolio';
-  themeSelection: boolean = false;
+  // themeSelection: boolean = false;
 
 
   ngOnInit(): void {
@@ -22,20 +22,23 @@ export class AppComponent implements OnInit{
 }
 
   constructor(private primengconfig: PrimeNGConfig, public route: ActivatedRoute, public router: Router, @Inject(DOCUMENT) private document: Document){
-    let theme = window.localStorage.getItem('theme');
-    if(theme){
-        this.themeSelection = theme == 'dark' ? true : false;
-        this.changeTheme(this.themeSelection);
-    }
+    // let theme = window.localStorage.getItem('theme');
+    // if(theme){
+    //     this.themeSelection = theme == 'dark' ? true : false;
+    //     this.changeTheme(this.themeSelection);
+    // }
+    console.log(this.router.url.toString());
+    console.log('aqui',this.router.url.includes('admin'));
+
   }
 
-  changeTheme(state: boolean){
-    console.log(state);
-    let theme = state ? 'dark' : 'light';
-    window.localStorage.setItem('theme', theme);
-    let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
-    themeLink.href = 'lara-' + theme + '-purple'+'.css';	
-} 
+//   changeTheme(state: boolean){
+//     console.log(state);
+//     let theme = state ? 'dark' : 'light';
+//     window.localStorage.setItem('theme', theme);
+//     let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
+//     themeLink.href = 'lara-' + theme + '-purple'+'.css';	
+// } 
 
   id = "tsparticles";
 
@@ -243,8 +246,9 @@ export class AppComponent implements OnInit{
                 "distance": 250,
                 "size": 0,
                 "duration": 2,
-                "opacity": 10,
-                "speed": 3
+                "opacity": 20,
+                "speed": 3,
+                
             },
             "repulse": {
                 "distance": 400,

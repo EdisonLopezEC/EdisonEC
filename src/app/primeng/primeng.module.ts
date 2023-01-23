@@ -13,7 +13,13 @@ import {KnobModule} from 'primeng/knob';
 import {CheckboxModule} from 'primeng/checkbox';
 import {PasswordModule} from 'primeng/password';
 import {InputSwitchModule} from 'primeng/inputswitch';
-
+import {TableModule} from 'primeng/table';
+import {PaginatorModule} from 'primeng/paginator';
+import {ToastModule} from 'primeng/toast';
+import {ToolbarModule} from 'primeng/toolbar';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {RatingModule} from 'primeng/rating';
+import {ChipsModule} from 'primeng/chips';
 @NgModule({
 
   exports: [
@@ -30,7 +36,15 @@ import {InputSwitchModule} from 'primeng/inputswitch';
     RippleModule,
     KnobModule,
     CheckboxModule,
-    PasswordModule
+    PasswordModule,
+    TableModule,
+    PaginatorModule,
+    ToastModule,
+    ToolbarModule,
+    ConfirmDialogModule,
+    RatingModule,
+    ChipsModule
+
   ]
 })
 export class PrimengModule { }

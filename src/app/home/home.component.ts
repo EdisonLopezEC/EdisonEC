@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -11,7 +12,8 @@ export class HomeComponent implements OnInit {
     isMobile() {
         return window.innerWidth < 750;
     }
-  constructor() { }
+  constructor(private router: Router) { }
+
     
   display: boolean = false;
   dockItems: MenuItem[] = [];
@@ -19,7 +21,9 @@ export class HomeComponent implements OnInit {
     showDialog(){
         this.display = true;
     }
-        
+    openLink(link: string){
+        window.open(link, "_blank");
+    }
     ngOnInit() {
         this.dockItems = [
             {

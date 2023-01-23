@@ -1,0 +1,65 @@
+<div class="flex align-items-center justify-content-center h-screen marginLogin animate__animated animate__fadeIn">
+    <div
+      class="flex w-full flex align-items-center justify-content-center font-bold text-gray-900 border-round"
+    >
+      <div
+        class="flex-1 flex align-items-center justify-content-center font-bold text-gray-900 m-0 px-0 py-0 border-round"
+        [ngClass]="
+          !isMobile() ? 'justify-content-end ' : 'justify-content-center'
+        "
+      >
+        <div
+          class="surface-card p-4 shadow-2 border-round"
+          [ngClass]="!isMobile() ? 'w-8 ' : 'w-9'"
+        >
+          <div class="text-center mb-5">
+        
+            <div class="text-900 text-3xl font-medium mb-3">
+              CONTACTAME
+            </div>
+          
+            <a
+              class="font-medium no-underline ml-2 text-blue-500 cursor-pointer"
+              routerLink="/"
+              >Ir a la pagina principal</a
+            >
+          </div>
+  
+          <div>
+            <label for="email1" class="block text-900 font-medium mb-2"
+              >Email</label
+            >
+            <input
+              type="text"
+              pInputText
+              class="w-full mb-3"
+              name="email"
+              [(ngModel)]="email"
+            />
+  
+            <label for="password1" class="block text-900 font-medium mb-2"
+              >Mensaje</label
+            >
+            <input
+            type="text"
+            pInputText
+            class="w-full mb-3"
+            name="email"
+            [(ngModel)]="email"
+          />
+            
+            <button
+              pButton
+              pRipple
+              label="Enviar Mensaje"
+              icon="pi pi-user"
+              class="w-full mt-4"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+   
+  </div>
+  

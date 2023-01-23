@@ -19,9 +19,7 @@ export class SkillsComponent implements OnInit {
   constructor(private skillService: SkillsService) { }
   skills: Skill[] = [];
     
-  addSkill(){
-    this.skillService.addSkill(this.skills[0]);
-  }
+ 
   ngOnInit(): void {
     this.skills = [
       {
@@ -80,6 +78,12 @@ export class SkillsComponent implements OnInit {
       bg: 'rgba(0, 0, 0, 0.22)',
       image: '/assets/skills/next.svg',
     }];
+
+    this.skillService.getSkills().subscribe(skills => {
+      this.skills = [...this.skills, ...skills];
+    });
   }
+
+
 
 }

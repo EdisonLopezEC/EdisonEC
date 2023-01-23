@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 interface Skill {
   name: string;
@@ -11,12 +13,30 @@ interface Skill {
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
+
 })
 export class ContactComponent implements OnInit {
-  valor: number = 0;
-  constructor() {}
+  constructor(private userService: UserService, private route: Router) { }
+  isFocused = false;
+  email:string = '';
+  password: string = '';
 
+  isMobile(){
+    return window.innerWidth < 1065;
+  }
   ngOnInit(): void {
-    this.valor = 10;
+  }
+
+  onSubmit(){
+    this.userService.login(this.email, this.password)
+    .then((user) => {
+      this.route.navigate(['/admin']);
+    }
+    ).
+    catch((error) => {
+      console.log(error);
+    }
+    );
   }
 }
