@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { CorreoService } from '../services/correo.service';
 
 interface Skill {
   name: string;
@@ -17,10 +18,15 @@ interface Skill {
 
 })
 export class ContactComponent implements OnInit {
-  constructor(private userService: UserService, private route: Router) { }
+  constructor(private userService: UserService, private route: Router, private correoService: CorreoService) { }
   isFocused = false;
   email:string = '';
   password: string = '';
+  mensaje: string = '';
+  nombre: string = '';
+  apellido: string = '';
+  telefono: string = '';
+
 
   isMobile(){
     return window.innerWidth < 1065;
@@ -28,15 +34,35 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
-    this.userService.login(this.email, this.password)
-    .then((user) => {
-      this.route.navigate(['/admin']);
+  enviar(){
+    const mensajeHTML = `<html><head><style>
+    /* Agrega tus estilos aquí */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
     }
-    ).
-    catch((error) => {
-      console.log(error);
+    p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
     }
+    strong {
+      font-weight: bold;
+    }
+    </style></head><body>
+    <p><strong>Mensaje:</strong> ${this.mensaje}</p>
+    <p><strong>Teléfono:</strong> ${this.telefono}</p>
+    </body></html>`;
+
+    this.correoService
+    .enviarCorreo(this.email, 'Correo Portafolio', mensajeHTML, this.nombre, this.apellido, this.telefono)
+    .subscribe(
+      (respuesta) => {
+        console.log('Correo enviado con éxito', respuesta);
+      },
+      (error) => {
+        console.error('Error al enviar el correo', error);
+      }
     );
   }
 }

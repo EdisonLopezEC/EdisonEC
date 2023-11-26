@@ -18,6 +18,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProjectsHomeComponent } from './projects-home/projects-home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -40,6 +41,7 @@ import { ProjectsHomeComponent } from './projects-home/projects-home.component';
     PrimengModule,
     FormsModule,
     FlexLayoutModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
