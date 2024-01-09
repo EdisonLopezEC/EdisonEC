@@ -11,7 +11,7 @@
     >
       <h2 class="m-0">Hola, soy Edison López</h2>
       <h1 class="m-0" [style]="{ 'font-size': '3.5rem' }">
-        Software Developer
+        Ingeniero de Software
       </h1>
       <p class="mb-3">apasionado por el desarrollo.</p>
 
@@ -36,6 +36,7 @@
           pButton
           pRipple
           icon="pi pi-linkedin"
+          (click)="openLink('https://www.linkedin.com/in/edison-lopez-698b20234/')"
           class="p-button-info p-button-rounded p-button-outlined p-button-sm"
           
         ></button>
@@ -43,12 +44,14 @@
           pButton
           pRipple
           icon="pi pi-whatsapp"
+          (click)="openLink('https://wa.me/+5930987784159')"
           class="p-button-success p-button-rounded p-button-outlined p-button-sm"
         ></button>
         <button
           pButton
           pRipple
           icon="pi pi-telegram"
+          (click)="openLink('https://wa.me/+5930987784159')"
           class="p-button-rounded p-button-outlined p-button-sm"
         ></button>
       </div>

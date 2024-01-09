@@ -1,0 +1,54 @@
+<div class="card" [attr.data-state]="currentState">
+    <div class="card-header">
+      <div class="card-cover" [style.background-image]="'url(' + coverImageUrl + ')'" ></div>
+      <img class="card-avatar" [src]="avatarImageUrl" alt="avatar" />
+      <h1 class="card-fullname">{{ fullName }}</h1>
+      <h2 class="card-jobtitle">{{ jobTitle }}</h2>
+    </div>
+    <div class="card-main">
+      <div class="card-section" id="about" [class.is-active]="currentState === '#about'">
+        <div class="card-content">
+          <div class="card-subtitle">ABOUT</div>
+          <p class="card-desc">{{ aboutText }}</p>
+        </div>
+        <div class="card-social">
+          <!-- ... códigos SVG para redes sociales ... -->
+        </div>
+      </div>
+      <div class="card-section" id="experience" [class.is-active]="currentState === '#experience'">
+        <div class="card-content">
+            <div class="card-subtitle">WORK EXPERIENCE</div>
+            <div class="card-timeline">
+              <div class="card-item" data-year="2022">
+                <div class="card-item-title">Job Title</div>
+                <div class="card-item-desc">Description of the job and responsibilities.</div>
+              </div>
+
+              <div class="card-item" data-year="2023">
+                <div class="card-item-title">Job Title</div>
+                <div class="card-item-desc">Description of the job and responsibilities.</div>
+              </div>
+
+              <div class="card-item" data-year="2023">
+                <div class="card-item-title">Job Title</div>
+                <div class="card-item-desc">Description of the job and responsibilities.</div>
+              </div>
+              <!-- Agrega más elementos .card-item según sea necesario -->
+            </div>
+          </div>
+      </div>
+      <div class="card-section" id="contact" [class.is-active]="currentState === '#contact'">
+        <div class="card-content">
+          <div class="card-subtitle">CONTACT</div>
+          <!-- ... información de contacto ... -->
+        </div>
+      </div>
+      <div class="card-buttons">
+        <button (click)="handleButtonClick('#about')" [class.is-active]="currentState === '#about'" class="button-about">ABOUT</button>
+        <button (click)="handleButtonClick('#experience')" [class.is-active]="currentState === '#experience'" class="button-experience">EXPERIENCE</button>
+        <button (click)="handleButtonClick('#contact')" [class.is-active]="currentState === '#contact'" class="button-contact">CONTACT</button>
+      </div>
+      
+    </div>
+  </div>
+  

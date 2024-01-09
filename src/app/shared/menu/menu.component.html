@@ -1,6 +1,6 @@
-<p-menubar [model]="items" [style]="{'height':'10vh'}" class="mb-3">
-  
+<p-menubar [model]="items" [style]="{'height':'10vh'}" [ngClass]="{'scrolled': isScrolled}" class="mb-3">
     <ng-template pTemplate="end">
-        <p-inputSwitch [(ngModel)]="themeSelection" (onChange)="changeTheme($event.checked)"></p-inputSwitch>
+        <!-- <p-inputSwitch [(ngModel)]="themeSelection" (onChange)="changeTheme($event.checked)"></p-inputSwitch> -->
+        <app-toggle  [(ngModel)]="themeSelection" (onChange)="changeTheme($event)"></app-toggle>
     </ng-template>
 </p-menubar>

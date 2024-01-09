@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProjectsHomeComponent } from './projects-home/projects-home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './card/card.component';
+import { SkillCard } from './shared/skillcard/skillcard.component';
 
 
 
@@ -31,6 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectsComponent,
     LoginComponent,
     ProjectsHomeComponent,
+    CardComponent,
+    SkillCard
+
   ],
   imports: [
     BrowserModule,
