@@ -24,6 +24,7 @@ import { SkillCard } from './shared/skillcard/skillcard.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

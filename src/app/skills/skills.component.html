@@ -11,20 +11,39 @@
     pRipple
     *ngFor="let skill of skills"
   >
-    <p-card
-      [header]="skill.name"
-      [style]="{
-        background: 'rgba(255, 255, 255, 0.07)'
-      }"
+  <p-card 
+  [style]="{ 'background': 'rgba(255, 255, 255, 0.07)', 'border-radius': '8px', 'box-shadow': '0 4px 8px rgba(0, 0, 0, 0.1)', 'height': '480px' }"
+  styleClass="custom-card"
+>
+  <ng-template pTemplate="header">
+    <div 
+      [style]="{ 'background': skill.bg, 'border-top-left-radius': '8px', 'border-top-right-radius': '8px', 'padding': '16px', 'text-align': 'center' }"
+      class="header-container"
     >
-      <ng-template pTemplate="header">
-        <div [style]="{ background: [skill.bg] }">
-          <img alt="Card" [src]="skill.image" />
-        </div>
-      </ng-template>
+      <img alt="Card" [src]="skill.image" style="max-width: 100%; height: auto; border-radius: 50%;" />
+    </div>
+  </ng-template>
 
-      <p style="padding: 0; text-align: center">{{ skill.description }}</p>
-    </p-card>
+  <div style="padding: 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+    <div>
+      <p style="margin-bottom: 12px; font-size: 18px; font-weight: bold; text-align: center;">{{ skill.name }}</p>
+      <p style="margin-bottom: 12px; font-size: 14px; color: #666; text-align: center;">{{ skill.description }}</p>
+      <p  style="margin-bottom: 12px; font-size: 14px; color: #666; text-align: center; font-weight: bold;">Tiempo de experiencia: <span  style="margin-bottom: 12px; font-size: 14px; color: #666; text-align: center; font-weight: lighter;">{{skill.experience}}</span></p>
+      <!-- Linea divisora -->
+      <div style="border-bottom: 1px solid #eeeeee1e; margin-bottom: 12px;"></div>
+        
+
+      <div style="text-align: center; margin-bottom: 12px;">
+        <p-progressBar [value]="skill.level" mode="determinate" styleClass="progressbar-custom"></p-progressBar>
+      </div>
+    </div>
+    <div style="text-align: center;">
+    </div>
+  </div>
+</p-card>
+
+
+  
   </div>
 </div>
 

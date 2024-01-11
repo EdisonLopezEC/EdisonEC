@@ -20,6 +20,8 @@ import {ToolbarModule} from 'primeng/toolbar';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {RatingModule} from 'primeng/rating';
 import {ChipsModule} from 'primeng/chips';
+import {ProgressBarModule} from 'primeng/progressbar';
+
 @NgModule({
 
   exports: [
@@ -43,7 +45,8 @@ import {ChipsModule} from 'primeng/chips';
     ToolbarModule,
     ConfirmDialogModule,
     RatingModule,
-    ChipsModule
+    ChipsModule,
+    ProgressBarModule
 
   ]
 })

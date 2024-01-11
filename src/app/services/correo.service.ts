@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CorreoService {
-  private brevoApiKey = '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'; // Reemplaza con tu clave API de Brevo
+  private brevoApiKey = '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'; // Reemplaza con tu clave API de Brevo
   private brevoApiUrl = 'https://api.brevo.com/v3/smtp/email';
 
   constructor(private http: HttpClient) {}
