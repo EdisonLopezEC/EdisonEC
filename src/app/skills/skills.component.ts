@@ -25,7 +25,7 @@ export class SkillsComponent implements OnInit {
     this.skills = [
       {
         name: 'JavaScript',
-        level: 70,
+        level: 90,
         description: 'Lenguaje ligero, interpretado y orientado a objetos con funciones de primera clase y tipado dinámico',
         bg: 'rgba(229, 176, 69, 0.22)',
         image: '/assets/skills/javascript.svg',
@@ -65,7 +65,7 @@ export class SkillsComponent implements OnInit {
       },
       {
         name: 'React',
-        level: 60,
+        level: 90,
         description: 'Biblioteca de JavaScript utilizada para construir interfaces de usuario interactivas y reutilizables',
         bg: 'rgba(0, 217, 255, 0.22)',
         image: '/assets/skills/react.svg',
@@ -81,7 +81,7 @@ export class SkillsComponent implements OnInit {
       },
       {
         name: 'Next.js',
-        level: 60,
+        level: 80,
         description: 'Framework de aplicación web de React utilizado para construir aplicaciones web escalables y de alto rendimiento',
         bg: 'rgba(160, 160, 160, 0.22)',
         image: '/assets/skills/next.svg',
