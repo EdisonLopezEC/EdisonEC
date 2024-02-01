@@ -23,7 +23,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Home',
+        label: 'Inicio',
         icon: 'pi pi-user',
         routerLink: '/'
       },
@@ -33,12 +33,12 @@ export class MenuComponent implements OnInit {
         routerLink: 'skills'
       },
       {
-        label: 'Projects',
+        label: 'Proyectos',
         icon: 'pi pi-briefcase',
         routerLink: 'projects'
       },
       {
-        label: 'Contact',
+        label: 'Contacto',
         icon: 'pi pi-phone',
         routerLink: 'contact'
       },
