@@ -1,0 +1,92 @@
+.custom-card {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ccc;
+    overflow: hidden;
+  }
+  
+  .custom-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .custom-card-header {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .custom-card-body {
+    padding: 20px;
+  }
+  
+  .custom-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .card-background {
+    position: relative;
+    background-image: url('https://cdn.tres.pe/wp-content/uploads/2017/07/How-to-Get-the-Resources-You-Need-to-Execute-Inbound-Marketing--1024x678.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Ocultar contenido que se salga de la card */
+  }
+  .card-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Color más claro y transparente */
+    z-index: -1;
+    opacity: 0.5; /* Ajustar la opacidad de la imagen de fondo */
+
+  }
+  
+  /* Estilos adicionales para el contenido dentro de la card */
+  .card-background .flex {
+    padding: 20px; /* Ajusta el espaciado del contenido dentro de la card */
+  }
+  /* Estilo para la imagen dentro de la card */
+.card-image {
+  width: 100%; /* Hacer que la imagen ocupe todo el ancho del contenedor */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Un ligero redondeo en las esquinas */
+}
+
+/* Estilo para el contenido de texto */
+.text-content {
+  font-size: 16px;
+}
+
+/* Detalles y tecnologías */
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* Botones */
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .details {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .buttons {
+      justify-content: space-evenly; /* Espaciar los botones de manera uniforme */
+  }
+}
