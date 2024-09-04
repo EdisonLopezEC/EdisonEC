@@ -5,9 +5,14 @@
   <h1 class="m-0 text-center" [style]="{ 'font-size': '3.5rem' }">Conoce las tecnologías que domino</h1>
 </div>
 
-<div class="grid pl-5 pr-5 mt-5">
+<div
+class="w-12"
+style="display: flex; justify-content: center; align-items: center;"
+>
+
+<div class="grid  mt-5 w-10">
   <div
-    class="col-12 sm:col-12 md:col-6 lg:col-3 animate__animated animate__zoomIn"
+    class="col-12 sm:col-12 md:col-6 lg:col-4 animate__animated animate__zoomIn"
     pRipple
     *ngFor="let skill of skills"
   >
@@ -27,8 +32,8 @@
   <div style="padding: 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
     <div>
       <p style="margin-bottom: 12px; font-size: 18px; font-weight: bold; text-align: center;">{{ skill.name }}</p>
-      <p style="margin-bottom: 12px; font-size: 14px; color: #666; text-align: center;">{{ skill.description }}</p>
-      <p  style="margin-bottom: 12px; font-size: 14px; color: #666; text-align: center; font-weight: bold;">Tiempo de experiencia: <span  style="margin-bottom: 12px; font-size: 14px; color: #666; text-align: center; font-weight: lighter;">{{skill.experience}}</span></p>
+      <p style="margin-bottom: 12px; font-size: 14px;  text-align: center;">{{ skill.description }}</p>
+      <p  style="margin-bottom: 12px; font-size: 14px;  text-align: center; font-weight: bold;">Tiempo de experiencia: <span  style="margin-bottom: 12px; font-size: 14px; color: #666; text-align: center; font-weight: lighter;">{{skill.experience}}</span></p>
       <!-- Linea divisora -->
       <div style="border-bottom: 1px solid #eeeeee1e; margin-bottom: 12px;"></div>
         
@@ -42,6 +47,7 @@
   </div>
 </p-card>
 
+</div>
 
   
   </div>

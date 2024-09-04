@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { ElementRef, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 interface Skill {
   name: string;
@@ -17,6 +18,9 @@ interface Skill {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  items: MenuItem[] = [];
+  themeSelection: boolean = false;
+  isScrolled: boolean = false;
 
     @ViewChild('projectsSection') projectsSection!: ElementRef;
     private scrollListener: () => void = () => {}; // Initialize with a no-op function
@@ -25,7 +29,30 @@ export class HomeComponent implements OnInit {
     isMobile() {
         return window.innerWidth < 750;
     }
-  constructor(private router: Router, private renderer: Renderer2) { }
+  constructor(private router: Router, private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { 
+    let theme = window.localStorage.getItem('theme');
+    if (theme) {
+      this.themeSelection = theme == 'dark' ? true : false;
+      this.changeTheme(this.themeSelection);
+    }
+
+  }
+
+
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Check the scroll position and update the property accordingly
+    this.isScrolled = window.scrollY > 50; // Adjust the threshold as needed
+  }
+  
+  changeTheme(state: boolean) {
+    console.log("ESTADOOO "+ state);
+    let theme = state ? 'dark' : 'light';
+    window.localStorage.setItem('theme', theme);
+    let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
+    themeLink.href = 'lara-' + theme + '-purple' + '.css';
+  }
 
   ngAfterViewInit() {
     // Call the function to set up the scroll listener
@@ -66,6 +93,44 @@ export class HomeComponent implements OnInit {
         window.open(link, "_blank");
     }
     ngOnInit() {
+      this.items = [
+        {
+          label: 'Inicio',
+          icon: 'pi pi-user',
+          // routerLink: '/'
+          //Navegar hasta el div con el id home
+          command: () => {
+            document.getElementById('home')?.scrollIntoView({behavior: 'smooth'});
+          }
+        },
+        {
+          label: 'Skills',
+          icon: 'pi pi-cog',
+          // routerLink: 'skills'
+          //Navegar hasta el div con el id skills
+          command: () => {
+            document.getElementById('skills')?.scrollIntoView({behavior: 'smooth'});
+          }
+        },
+        {
+          label: 'Proyectos',
+          icon: 'pi pi-briefcase',
+          // routerLink: 'projects'
+          //Navegar hasta el div con el id projects
+          command: () => {
+            document.getElementById('projects')?.scrollIntoView({behavior: 'smooth'});
+          }
+        },
+        {
+          label: 'Contacto',
+          icon: 'pi pi-phone',
+          // routerLink: 'contact'
+          //Navegar hasta el div con el id contact
+          command: () => {
+            document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'});
+          }
+        },
+      ];
 
       this.skills = [
         {
