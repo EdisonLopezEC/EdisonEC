@@ -1,12 +1,12 @@
 // correo.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CorreoService {
-  private brevoApiKey = environment.apik;
+  private brevoApiKey = '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'; 
   private brevoApiUrl = 'https://api.brevo.com/v3/smtp/email';
 
   constructor(private http: HttpClient) {}
