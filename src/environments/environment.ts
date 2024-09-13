@@ -5,9 +5,9 @@
 export const environment = {
   apik: "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",
   firebase: {
-    projectId: 'edisonlopez-c57e2',
-    appId: '1:499729183331:web:58ba0ad42be1ec3cf53e56',
-    storageBucket: 'edisonlopez-c57e2.appspot.com',
+    projectId: '',
+    appId: '',
+    storageBucket: '',
     locationId: 'us-central',
     apiKey: 'AIzaSyApYC1ipFUxm8v_hQani4tiSiQQpEaCFw8',
     authDomain: 'edisonlopez-c57e2.firebaseapp.com',

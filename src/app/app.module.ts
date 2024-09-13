@@ -34,7 +34,7 @@ import { ToggleComponent } from './shared/swithc/switch.component';
     CardComponent,
     SkillCard,
     ExperienceComponent,
-ToggleComponent
+    ToggleComponent
     
 
   ],
