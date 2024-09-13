@@ -35,6 +35,15 @@ export class ContactComponent implements OnInit {
   }
 
   enviar(){
+
+
+    //Controlar que los campos no esten vacios
+    if(this.email === '' || this.mensaje === '' || this.nombre === '' || this.apellido === '' || this.telefono === ''){
+      console.log('Campos vacios');
+      return;
+    }
+
+
     const mensajeHTML = `<html><head><style>
     /* Agrega tus estilos aquí */
     body {
@@ -58,10 +67,27 @@ export class ContactComponent implements OnInit {
     .enviarCorreo(this.email, 'Correo Portafolio', mensajeHTML, this.nombre, this.apellido, this.telefono)
     .subscribe(
       (respuesta) => {
-        console.log('Correo enviado con éxito', respuesta);
+        //Vaciar los campos
+        this.email = '';
+        this.mensaje = '';
+        this.nombre = '';
+        this.apellido = '';
+        this.telefono = '';
+
+        // Navegar a la posicion 0 de la pagina con la animacion smooth
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+
+        // console.log('Correo enviado con éxito', respuesta);
       },
       (error) => {
-        console.error('Error al enviar el correo', error);
+          //Vaciar los campos
+          this.email = '';
+          this.mensaje = '';
+          this.nombre = '';
+          this.apellido = '';
+          this.telefono = '';
+          
       }
     );
   }

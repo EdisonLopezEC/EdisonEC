@@ -52,7 +52,7 @@ export class MenuComponent implements OnInit {
   }
 
   changeTheme(state: boolean) {
-    console.log("ESTADOOO "+ state);
+    // console.log("ESTADOOO "+ state);
     let theme = state ? 'dark' : 'light';
     window.localStorage.setItem('theme', theme);
     let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;

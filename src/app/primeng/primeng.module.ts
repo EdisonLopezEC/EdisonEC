@@ -21,6 +21,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {RatingModule} from 'primeng/rating';
 import {ChipsModule} from 'primeng/chips';
 import {ProgressBarModule} from 'primeng/progressbar';
+import { TimelineModule } from 'primeng/timeline';
 
 @NgModule({
 
@@ -46,7 +47,8 @@ import {ProgressBarModule} from 'primeng/progressbar';
     ConfirmDialogModule,
     RatingModule,
     ChipsModule,
-    ProgressBarModule
+    ProgressBarModule,
+    TimelineModule
 
   ]
 })

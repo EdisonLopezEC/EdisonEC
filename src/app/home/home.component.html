@@ -1,14 +1,15 @@
 <p-menubar [model]="items" class="fixed-header mb-3"  [style]="{'height':'7vh'}">
   <ng-template pTemplate="end">
       <p-inputSwitch [(ngModel)]="themeSelection" (onChange)="changeTheme($event.checked)"></p-inputSwitch>
-      <app-toggle [(ngModel)]="themeSelection" (onChange)="changeTheme(true)"></app-toggle>
+      <!-- <app-toggle [(ngModel)]="themeSelection"  (onChange)="changeTheme($event)"></app-toggle> -->
   </ng-template>
 </p-menubar>
 
 
 
+<div 
 
-<div class="content-wrapper grid mt-3 pl-4 pr-4" [style]="{ height: '82vh' }">
+class="content-wrapper grid mt-3 pl-4 pr-4" [style]="{ height: '82vh' }">
   <!-- IZQUIERDA -->
   <div
     class="col-12 sm:col-6 md:col-6 lg:col-6 flex align-items-center justify-content-center animate__animated animate__fadeIn"
@@ -23,7 +24,19 @@
       <h1 class="m-0" [style]="{ 'font-size': '3.5rem' }">
         Ingeniero de Software
       </h1>
-      <p class="mb-3">apasionado por el desarrollo.</p>
+      <!-- <p class="mb-3">apasionado por el desarrollo.</p> -->
+      <div
+      [ngClass]="themeSelection ? 'bodyy' : 'bodyywhite'"
+        class="bodyy"
+      >
+
+      <div
+      [ngClass]="themeSelection ? 'animated-text' : 'animated-textwhite'"
+
+      >
+        apasionado por <span></span>
+    </div>
+  </div>
 
       <div class="flex justify-content-evenly" style="width: 100%">
         <button
@@ -82,27 +95,37 @@
   </div>
   <!-- FIN LOGO -->
 </div>
+
 <br />
 <br/>
+
 <div
   id="skills"
-  class="content-wrapper grid mt-3 pl-4 pr-4"
+  class="content-wrapper grid mt-3"
 >
   <app-skills
   ></app-skills>
 </div>
 
+<app-experience
+  id="experience"
+  >
+</app-experience>
 
 <div
   id="projects"
-  class="content-wrapper grid mt-3 pl-4 pr-4"
+
 >
 <app-projects-home
+
 ></app-projects-home>
 </div>
 
+<app-contact
+  id="contact"
+  ></app-contact>
 
-
+<!-- FOOTER -->
 <body
   class="bodyclass"
 
@@ -159,46 +182,8 @@
             </div>
         </div>
         <div class="content">
-            <div class="container">
-                <div class="footer__label">
-                    <h2 class="footer__title">EdisonLópez</h2>
-                    <span class="footer__subtitle">Company Description</span>
-                </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="" class="footer__link">Home</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer__link">About</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer__link">Services</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer__link">Portflio</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer__link">Contact</a>
-                    </li>
-
-                </ul>
-                <div class="footer__socials">
-                    <a href="" class="footer__social">
-                        <i class="uil uil-github-alt social__icon"></i>
-                    </a>
-                    <a href="" class="footer__social">
-                        <i class="fa-brands fa-codepen"></i>
-                    </a>
-                    <a href="" class="footer__social">
-                        <i class="uil uil-instagram"></i>
-                    </a>
-                    <a href="" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-                </div>
-            </div>
-            <p class="footer__copy">rjksharma | ©Copyright All rights reserved</p>
+         
+            <p class="footer__copy">Edison López | ©Copyright All rights reserved</p>
         </div>
     </div>
     <svg style="position:fixed; top:100vh">

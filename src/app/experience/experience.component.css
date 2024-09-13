@@ -1,0 +1,50 @@
+.card-content {
+    display: flex;
+    flex-direction: column; /* Hace que los elementos se dispongan verticalmente */
+    align-items: center; /* Centra los elementos en el eje vertical */
+    text-align: center;
+  }
+  
+  .card-image {
+    width: 100%; /* La imagen ocupa el ancho completo */
+    max-width: 300px; /* Puedes ajustar el tamaño máximo de la imagen */
+    margin-bottom: 1rem;
+  }
+  
+  .card-details {
+    width: 100%;
+  }
+  
+  .rounded-circle {
+    border-radius: 50%;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row; /* Dirección por defecto */
+  }
+  
+  @media (max-width: 991px) { /* Este media query es para pantallas medianas y más pequeñas (md) */
+    .flex-container {
+      flex-direction: column; /* Cambia a disposición vertical en pantallas medianas */
+      align-items: center; /* Centra los elementos en el eje horizontal */
+    }
+  }
+  
+  @media (max-width: 767px) { /* Este media query es para pantallas pequeñas (sm) */
+    .flex-container {
+      flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+      align-items: center; /* Centra los elementos en el eje horizontal */
+    }
+
+    @media (max-width: 567px) { /* Este media query es para pantallas extra pequeñas (xs) */
+    .flex-container {
+      flex-direction: column; /* Cambia a disposición vertical en pantallas extra pequeñas */
+      align-items: center; /* Centra los elementos en el eje horizontal */
+    }
+
+  }
+}
+  
+
+ 

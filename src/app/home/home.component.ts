@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   items: MenuItem[] = [];
   themeSelection: boolean = false;
   isScrolled: boolean = false;
+  theme: string = 'dark';
 
     @ViewChild('projectsSection') projectsSection!: ElementRef;
     private scrollListener: () => void = () => {}; // Initialize with a no-op function
@@ -31,9 +32,17 @@ export class HomeComponent implements OnInit {
     }
   constructor(private router: Router, private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { 
     let theme = window.localStorage.getItem('theme');
+
+
+
     if (theme) {
       this.themeSelection = theme == 'dark' ? true : false;
       this.changeTheme(this.themeSelection);
+    }else{
+      //Establecer el tema por defecto localsotrage y el tema
+      window.localStorage.setItem('theme', 'dark');
+      this.themeSelection = true;
+      this.changeTheme(this.themeSelection );
     }
 
   }
@@ -47,7 +56,8 @@ export class HomeComponent implements OnInit {
   }
   
   changeTheme(state: boolean) {
-    console.log("ESTADOOO "+ state);
+    console.log(state);
+
     let theme = state ? 'dark' : 'light';
     window.localStorage.setItem('theme', theme);
     let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
@@ -56,31 +66,10 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit() {
     // Call the function to set up the scroll listener
-    this.setupScrollListener();
+    // this.setupScrollListener();
   }
 
-  setupScrollListener() {
-    // Add scroll event listener to the window
-    this.scrollListener = this.renderer.listen('window', 'scroll', () => {
-      // Get the scroll position
-      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-      // Determine the offset of the Projects section from the top
-      const projectsSectionOffset = this.projectsSection.nativeElement.offsetTop;
-
-      // Define a threshold to trigger the scroll (adjust as needed)
-      const scrollThreshold = 100;
-
-      // Check if the user has scrolled to or past the threshold
-      if (scrollPosition >= projectsSectionOffset - scrollThreshold) {
-        // Scroll to the Projects section
-        this.projectsSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
-
-        // Remove the scroll listener after scrolling to the Projects section
-        this.scrollListener(); // Remove the event listener
-      }
-    });
-  }
 
 
   display: boolean = false;
@@ -93,16 +82,20 @@ export class HomeComponent implements OnInit {
         window.open(link, "_blank");
     }
     ngOnInit() {
+
+
       this.items = [
         {
           label: 'Inicio',
           icon: 'pi pi-user',
-          // routerLink: '/'
-          //Navegar hasta el div con el id home
           command: () => {
-            document.getElementById('home')?.scrollIntoView({behavior: 'smooth'});
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
           }
         },
+  
         {
           label: 'Skills',
           icon: 'pi pi-cog',
@@ -111,6 +104,15 @@ export class HomeComponent implements OnInit {
           command: () => {
             document.getElementById('skills')?.scrollIntoView({behavior: 'smooth'});
           }
+        },
+        {
+          label: 'Experiencia',
+          icon: 'pi pi-briefcase',
+          // routerLink: 'experience'
+          //Navegar hasta el div con el id experience
+          command: () => {
+            document.getElementById('experience')?.scrollIntoView({behavior: 'smooth'});
+        }
         },
         {
           label: 'Proyectos',

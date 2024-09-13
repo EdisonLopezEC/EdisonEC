@@ -9,8 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { SkillsComponent } from './skills/skills.component';
-import { ProjectsComponent } from './admin/pages/projects/projects.component';
-import { LoginComponent } from './auth/pages/login/login.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -21,7 +19,8 @@ import { ProjectsHomeComponent } from './projects-home/projects-home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './card/card.component';
 import { SkillCard } from './shared/skillcard/skillcard.component';
-
+import { ExperienceComponent } from './experience/experience.component';
+import { ToggleComponent } from './shared/swithc/switch.component';
 
 
 
@@ -31,11 +30,12 @@ import { SkillCard } from './shared/skillcard/skillcard.component';
     HomeComponent,
     ContactComponent,
     SkillsComponent,
-    ProjectsComponent,
-    LoginComponent,
     ProjectsHomeComponent,
     CardComponent,
-    SkillCard
+    SkillCard,
+    ExperienceComponent,
+ToggleComponent
+    
 
   ],
   imports: [

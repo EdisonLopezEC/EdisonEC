@@ -27,8 +27,8 @@ export class AppComponent implements OnInit{
     //     this.themeSelection = theme == 'dark' ? true : false;
     //     this.changeTheme(this.themeSelection);
     // }
-    console.log(this.router.url.toString());
-    console.log('aqui',this.router.url.includes('admin'));
+    // console.log(this.router.url.toString());
+    // console.log('aqui',this.router.url.includes('admin'));
 
   }
 
@@ -380,7 +380,7 @@ export class AppComponent implements OnInit{
 
 
   particlesLoaded(container: any): void {
-    console.log(container);
+    // console.log(container);
   }
 
   async particlesInit(engine: any): Promise<void> {

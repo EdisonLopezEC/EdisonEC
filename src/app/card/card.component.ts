@@ -13,7 +13,7 @@ export class CardComponent {
   aboutText = 'Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.';
   
   handleButtonClick(targetSection: string): void {
-    console.log('Changing state to', targetSection);
+    // console.log('Changing state to', targetSection);
     this.currentState = targetSection;
   }
   

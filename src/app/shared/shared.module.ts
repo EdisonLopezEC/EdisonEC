@@ -4,7 +4,6 @@ import { PrimengModule } from '../primeng/primeng.module';
 import { MenuComponent } from './menu/menu.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { FormsModule } from '@angular/forms';
-import { ToggleComponent } from './swithc/switch.component';
 
 
 
@@ -12,7 +11,6 @@ import { ToggleComponent } from './swithc/switch.component';
   declarations: [
     MenuComponent,
     MenuAdminComponent,
-    ToggleComponent,
   ],
   imports: [
     CommonModule,

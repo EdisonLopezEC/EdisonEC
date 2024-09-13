@@ -1,0 +1,73 @@
+<div
+  class="card flex flex-column justify-content-evenly align-items-center w-12 mt-5"
+>
+  <h2 class="m-0 text-center">Edison López Desarrollador de Software</h2>
+  <h1 class="m-0 text-center" [style]="{ 'font-size': '3.5rem' }">
+    Conoce la experiencia que tengo
+  </h1>
+</div>
+
+<div
+  class="w-12"
+  style="display: flex; justify-content: center; align-items: center"
+>
+  <!-- <div
+    class="content-wrapper grid mt-3 pl-4 pr-4 w-11"
+    [style]="{ height: '100vh' }"
+  > -->
+  <div
+class="w-11 flex-container"
+>
+    <!-- LOGO -->
+    <div
+      class="col-12 sm:col-5 md:col-5 lg:col-5 flex align-items-center justify-content-center"
+    >
+      <img
+        src="../../../assets/ofiss.svg"
+        alt=""
+        width="82%"
+        class="animate__animated animate__zoomIn"
+      />
+    </div>
+    <!-- FIN LOGO -->
+
+    <!-- IZQUIERDA -->
+    <div
+      class="col-12 sm:col-7 md:col-7 lg:col-7 flex align-items-center justify-content-center animate__animated animate__fadeIn"
+    >
+      <div class="grid mt-5 w-12">
+        <!-- Cinco contenedores en horizontal -->
+        <div
+          class="col-12 sm:col-12 md:6 lg:6 animate__animated animate__zoomIn"
+          pRipple
+          *ngFor="let experience of events"
+        >
+          <p-card
+            header="{{experience.nombreEmpresa}} | {{experience.puesto}}"
+            subheader="{{experience.fechaInicio}} - {{experience.fechaFin}} | {{experience.tecnologias}}"
+            title="Descripción"
+            class="w-12"
+          >
+          <div class="flex-container flex justify-content-evenly align-items-center w-12">
+            <img
+                src="{{experience.logo}}"
+                width="70"
+                height="70"
+                class="rounded-circle"
+                style="margin-right: 10px; background-color: #000"
+
+                />
+
+              <p class="w-12">
+                {{experience.descripcion}}
+              </p>
+            </div>
+          </p-card>
+
+          <!-- p-card horizontal -->
+        </div>
+      </div>
+    </div>
+    <!-- FIN IZQUIEDA -->
+  </div>
+</div>
