@@ -53,7 +53,7 @@ export class ExperienceComponent implements OnInit {
           tecnologias: 'React, Firebase, Bash, Whatsapp API, OpenIA API, Docker, AWS',
           puesto: 'Desarrollador Full Stack',
           fechaInicio: 'Agosto 2023',
-          fechaFin: 'Marzo 2023',
+          fechaFin: 'Marzo 2024',
           descripcion: 'Logré reducir los tiempos de atención y gestión al cliente en un 80% mediante la automatización de procesos y la implementación de un chatbot con inteligencia artificial y técnicas de Web Scraping.',
           logo: 'assets/ingedemy.jpg'
         },
@@ -61,8 +61,8 @@ export class ExperienceComponent implements OnInit {
           nombreEmpresa: 'Empresa Eléctrica Ambato',
           tecnologias: 'Spring, React, Oracle, Linux',
           puesto: 'Desarrollador Full Stack',
-          fechaInicio: 'Enero 2019',
-          fechaFin: 'Diciembre 2019',
+          fechaInicio: 'Enero 2023',
+          fechaFin: 'Julio 2023',
           descripcion: 'Logré solucionar cada una de las incidencias asignadas por el equipo de desarrollo y logré implementar una nueva funcionalidad en la aplicación móvil de la empresa.',
           logo: 'assets/eeasa.png'
         },
@@ -70,8 +70,8 @@ export class ExperienceComponent implements OnInit {
           nombreEmpresa: 'Sounter',
           tecnologias: 'Next.js, Ionic, Node.js, MongoDB, Firebase, Flutter, WebSockets',
           puesto: 'Desarrollador Full Stack',
-          fechaInicio: 'Enero 2019',
-          fechaFin: 'Diciembre 2019',
+          fechaInicio: 'Junio 2021',
+          fechaFin: 'Diciembre 2022',
           descripcion: 'Logré solucionar cada una de las incidencias asignadas por el equipo de desarrollo y logré implementar una nueva funcionalidad en la aplicación móvil de la empresa.',
           logo: '/assets/sounter.png'
         },
@@ -80,7 +80,7 @@ export class ExperienceComponent implements OnInit {
           tecnologias: 'Next.js, Ionic, Node.js, MongoDB, Firebase, Flutter, WebSockets',
           puesto: 'Desarrollador Full Stack',
           fechaInicio: 'Enero 2019',
-          fechaFin: 'Diciembre 2019',
+          fechaFin: 'Actualidad',
           descripcion: 'Trabaje como freelancer en distintos proyectos de desarrollo de software, desde aplicaciones móviles hasta aplicaciones web. Algunas de las empresas son: Mecadomi, Crediplus, Ferreteria, Venta de Software a estudiantes, entre otros.',
           logo: '/assets/mercadomi.png'
         }
